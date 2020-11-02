@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:trace_demo/candlestick.dart';
 import 'package:trace_demo/models/product-price-info.model.dart';
 
 class ProductDetails extends StatefulWidget {
@@ -27,7 +28,7 @@ class ProductDetailsState extends State {
           title: Text(name),
         )
       ),
-      body: Text(name),
+      body: Candlestick(),
     );
   }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trace_demo/market.dart';
+import 'package:trace_demo/product-details.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        backgroundColor: Colors.white,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -36,6 +38,13 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          IconButton(icon: Icon(Icons.analytics), onPressed: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => ProductDetails('test'))
+            );
+          })
+        ],
       ),
       body: MarketPage(),
     );
