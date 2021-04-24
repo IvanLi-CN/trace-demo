@@ -160,7 +160,7 @@ class _Painter extends CustomPainter {
       );
       final painter = TextPainter(
         text: span,
-        textDirection: TextDirection.ltr,
+        text  Direction: TextDirection.ltr,
         textAlign: TextAlign.right,
       )..layout(maxWidth: 46, minWidth: 46);
       painter.paint(canvas, Offset(size.width - 50, y - painter.height / 2));
